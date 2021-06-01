@@ -41,7 +41,72 @@
 
   <main>
     <div class='main-banner'>
+      <form class='main-form' action="GET">
+        <label>
+          <h6 class='label'>Party Size:</h6>
+          <div class='form-container-size'>
+            <select class='input form-size' name='size-adults' type="text">
+              <option value="2">2 adults</option>
+              <option value="3">3 adults</option>
+              <option value="4">4 adults</option>
+            </select>
+            <select class='input form-size' name='size-kids' type="text">
+              <option value="0">no kids</option>
+              <option value="1">1 kids</option>
+              <option value="2">2 kids</option>
+              <option value="3">3 kids</option>
+              <option value="4">4 kids</option>
+              <option value="5">5 kids</option>
+              <option value="6">6 kids</option>
+            </select>
+          </div>
 
+        </label>
+        <label>
+          <h6 class='label'>Reservation Name:</h6>
+          <input class='input form-name' name='name' type="text">
+        </label>
+        <div class='form-container'>
+          <label>
+            <h6 class='label'>Date:</h6>
+            <input class='input form-date' name='date' type="date">
+          </label>
+          <label>
+            <h6 class='label'>Time:</h6>
+            <select class='input form-size' name='time' type="text">
+              <option value="10am">10AM</option>
+              <option value="11am">11AM</option>
+              <option value="12pm">12PM</option>
+              <option value="1pm">1PM</option>
+              <option value="2pm">2PM</option>
+              <option value="3pm">3PM</option>
+              <option value="4pm">4PM</option>
+              <option value="5pm">5PM</option>
+              <option value="6pm">6PM</option>
+              <option value="7pm">7PM</option>
+              <option value="8pm">8PM</option>
+              <option value="9pm">9PM</option>
+            </select>
+          </label>
+        </div>
+        <div class='form-container-button'>
+          <input class='form-button' type="submit" value="Reserve">
+        </div>
+      </form>
+    </div>
+    <div class="main-quicklinks">
+      <a href='#' class='quicklinks-element'>
+        Pick-Up Order
+      </a>
+      <a href='#' class='quicklinks-element'>
+        Delivery Order
+      </a>
+      <a href='#' class='quicklinks-element'>
+        Menu
+      </a>
+      <a href='#' class='quicklinks-element'>
+        Private Events
+      </a>
     </div>
   </main>
 
