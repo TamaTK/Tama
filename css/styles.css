@@ -1,196 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;  
-  list-style: none;
-}
-
-a, a:link, a:active, a:hover, a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-.flexed {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-html {
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-}
-
-body {
-  background-color: #430014;
-}
-
-header {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-header > .header-hours {
-  background-color: #FF004A;
-  width: 100%;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px;
-  font-weight: 500;
-  color: rgb(255, 208, 208);
-  letter-spacing: 0.5px;
-  font-size: 14px;
-}
-
-.header-nav {
-  height: 100px;
-  width: 100%;
-  background-color: #A80031;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.header-nav > .nav-logo {
-  height: 60px;
-}
-
-.header-nav > .nav-links {
-  height: 60px;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-.header-nav > .nav-links > li {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  height: 100%;
-  margin: 10px;
-  /* background-color: blue;
-  opacity: .5; */
-}
-
-.nav-links > li a {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 15px;
-  transition: .2s;
-  color: #ffc4c4;
-}
-
-.nav-links > li a:hover {
-  color: white;
-}
-
-.nav-links .separator {
-  width: 6px;
-  height: 6px;
-  background-color: white;
-  border-radius: 100%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* @import url('./main.css'); */
 
 main {
-  position: relative;
   margin: 20px;
   height: auto;
-  display: flex;
+  min-height: calc(100vh - 220px);
   gap: 20px;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-main > .main-banner {
+.banner {
   width: 100%;
   height: 400px;
-  background: url('../img/pizza-image.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-main > .main-quicklinks {
-  margin: 40px 0;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-quicklinks > .quicklinks-element {
-  width: 200px;
-  height: 200px;
-  margin: 50px;
-  border-radius: 100%;
-  background-color: #FF004A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  color: white;
-  font-weight: 300;
-  transition: .2s;
-}
-
-.main-quicklinks > .quicklinks-element:hover {
-  background-color: #ff2f2f;
-}
-
-.main-form {
-  width: 360px;
-  background-color: #FF004A;
-  height: 400px;
-  padding: 20px;
-}
-
-.main-form .label {
-  font-size: 20px;
-  color: white;
-  font-weight: 300;
-}
-
-.main-form .input {
-  height: 30px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.form-size {
-  width: 100px;
-}
-.form-name {
-  width: 100%;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.form-container-size {
-  display: flex;
   flex-direction: row;
   gap: 20px;
 }
-.size-and {
-  font-size: 18px;
+
+.banner-form {
+  width: 360px;
+  background-color: #ff004a;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.form-title {
+  font-size: 20px;
   color: white;
   font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.form-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-container-horizontal {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.form-input {
+  height: 30px;
+  font-size: 18px;
+}
+
+.form-container-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .form-button {
   background-color: white;
@@ -199,18 +69,114 @@ main > .main-quicklinks {
   padding: 10px 20px;
   color: black;
   margin-top: 10px;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
- }
- .form-button:hover {
+}
+.form-button:hover {
   background-color: #ffe2e2;
- }
- .form-button:active {
+}
+.form-button:active {
   background-color: #ff9d9d;
- }
- .form-container-button {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  background: url("../img/pizza-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.quicklinks {
+  margin: 40px 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quicklinks-element {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  border-radius: 100%;
+  background-color: #ff004a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 300;
+  transition: 0.2s;
+}
+
+.quicklinks-element:hover {
+  background-color: #ff2f2f;
+}
+
+.intro {
+  font-weight: 500;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin: 15px;
+}
+
+.intro h3 {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.intro p {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 15px;
+}
+
+/* Menu Page */
+
+.tg {
+  color: white;
+  overflow-x: auto;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.tg td {
+  font-size: 20px;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #a80031;
+}
+
+tbody > tr:hover {
+  background-color: #ff2f2f;
+}
+
+tbody > tr > td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-head {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+.table-price {
+  width: 5%;
+}
+.table-name {
+  width: 15%;
+}
+.table-nutrit {
+  width: 12%;
+}

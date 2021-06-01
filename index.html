@@ -3,77 +3,70 @@
 
 <head>
   <link rel="stylesheet" href="./css/styles.css">
-
+  <link rel="stylesheet" href="./css/main.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcon's Pizzeria</title>
+  <title>Marcon's Pizzeria | Home</title>
 </head>
 
 <body>
   <header>
-    <p class='header-hours'>We open Monday to Friday from 10am to 10pm and Weekends from 11am to 11pm</p>
-    <nav class='header-nav'>
+    <p class='header-info flexed'>We open Monday to Friday from 10am to 10pm and Weekends from 11am to 11pm</p>
+    <nav class='nav flexed'>
       <img class='nav-logo' src="./img/logo.svg" alt="Marcon's Pizzeria" />
-      <ul class='nav-links flexed'>
-        <li>
-          <a href="#">Home</a>
-        </li>
+      <ul class='nav-links'>
+        <li><a href="./index.html">Home</a></li>
         <div class='separator'></div>
-        <li>
-          <a href="#">Pizza Menu</a>
-        </li>
+        <li><a href="./menu.html">Pizza Menu</a></li>
         <div class='separator'></div>
-        <li>
-          <a href="#">Order Pizza</a>
-        </li>
+        <li><a href="./order.html">Order Pizza</a></li>
         <div class='separator'></div>
-        <li>
-          <a href="#">About Marcon's</a>
-        </li>
+        <li><a href="./about.html">About Marcon's</a></li>
         <div class='separator'></div>
-        <li>
-          <a href="#">We Hire</a>
-        </li>
+        <li><a href="./hire.html">We Hire</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class='main-banner'>
-      <form class='main-form' action="GET">
-        <label>
-          <h6 class='label'>Party Size:</h6>
-          <div class='form-container-size'>
-            <select class='input form-size' name='size-adults' type="text">
-              <option value="2">2 adults</option>
-              <option value="3">3 adults</option>
-              <option value="4">4 adults</option>
+    <section class='banner flexed'>
+      <form class='banner-form' action="GET">
+
+        <label class='form-label'>
+          <h6 class='form-title'>Party Size:</h6>
+          <div class='form-container-horizontal'>
+            <select class='form-input form-input-size' name='size-adults' type="text">
+              <option value="adult-1">1 Adult</option>
+              <option value="adult-2" selected='selected'>2 Adults</option>
+              <option value="adult-3">3 Adults</option>
+              <option value="adult-4">4 Adults</option>
             </select>
-            <select class='input form-size' name='size-kids' type="text">
-              <option value="0">no kids</option>
-              <option value="1">1 kids</option>
-              <option value="2">2 kids</option>
-              <option value="3">3 kids</option>
-              <option value="4">4 kids</option>
-              <option value="5">5 kids</option>
-              <option value="6">6 kids</option>
+            <select class='form-input form-input-size' name='size-kids' type="text">
+              <option value="kid-0">No Kids</option>
+              <option value="kid-1">1 Kid</option>
+              <option value="kid-2">2 Kids</option>
+              <option value="kid-3">3 Kids</option>
+              <option value="kid-4" selected='selected'>4 Kids</option>
+              <option value="kid-5">5 Kids</option>
+              <option value="kid-6">6 Kids</option>
             </select>
           </div>
+        </label>
 
+        <label class='form-label'>
+          <h6 class='form-title'>Reservation Name:</h6>
+          <input class='form-input form-input-name' name='name' type="text">
         </label>
-        <label>
-          <h6 class='label'>Reservation Name:</h6>
-          <input class='input form-name' name='name' type="text">
-        </label>
-        <div class='form-container'>
-          <label>
-            <h6 class='label'>Date:</h6>
-            <input class='input form-date' name='date' type="date">
+
+        <div class='form-container-horizontal'>
+          <label class='form-label'>
+            <h6 class='form-title'>Date:</h6>
+            <input class='form-input' name='date' type="date">
           </label>
-          <label>
-            <h6 class='label'>Time:</h6>
-            <select class='input form-size' name='time' type="text">
+          <label class='form-label'>
+            <h6 class='form-title'>Time:</h6>
+            <select class='form-input' name='time' type="text">
               <option value="10am">10AM</option>
               <option value="11am">11AM</option>
               <option value="12pm">12PM</option>
@@ -89,29 +82,45 @@
             </select>
           </label>
         </div>
+
         <div class='form-container-button'>
           <input class='form-button' type="submit" value="Reserve">
         </div>
+
       </form>
-    </div>
-    <div class="main-quicklinks">
+      <div class='banner-img'></div>
+    </section>
+
+    <section class="quicklinks">
       <a href='#' class='quicklinks-element'>
         Pick-Up Order
       </a>
       <a href='#' class='quicklinks-element'>
         Delivery Order
       </a>
-      <a href='#' class='quicklinks-element'>
+      <a href='./menu.html' class='quicklinks-element'>
         Menu
       </a>
-      <a href='#' class='quicklinks-element'>
+      <a href='./about.html#events' class='quicklinks-element'>
         Private Events
       </a>
-    </div>
+    </section>
+
+    <section class="intro">
+      <h3>Welcome to Marcon's Pizzeria</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tellus commodo, congue
+        metus eu, maximus ante. Ut
+        ultrices commodo ultricies. Curabitur condimentum luctus mauris eu laoreet. Proin non maximus enim, ac dictum
+        dolor.
+        Phasellus malesuada quam sed sagittis dignissim. Vivamus elementum dolor ut ipsum venenatis eleifend. Aenean nec
+        sem non.</p>
+    </section>
   </main>
 
   <footer>
-
+    <div class='footer-element'>Website by s5242191©</div>
+    <div class='footer-element'>Phone: (07) 3200 6938</div>
+    <div class='footer-element'><a href="#" ?>Email: info@marcons.com.au</a></div>
   </footer>
 </body>
 
