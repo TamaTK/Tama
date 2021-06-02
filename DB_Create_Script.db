@@ -1,0 +1,59 @@
+
+DROP TABLE IF EXISTS CUSTOMERS;
+DROP TABLE IF EXISTS PRODUCTS;
+DROP TABLE IF EXISTS EVENTS;
+
+CREATE TABLE CUSTOMERS
+(
+CUSTID INTEGER PRIMARY KEY,
+FIRSTNAME varchar(64),
+LASTNAME varchar(64),
+ADDRESS varchar(255),
+PHONE varchar(16)
+);
+
+INSERT INTO CUSTOMERS (FIRSTNAME, LASTNAME, ADDRESS, PHONE) 
+VALUES ('John', 'Smith', '5 Fictitious Street, Springfield', '(07) 1122 3344'),
+('Fred', 'Jones', '12 Some Place, Gotham', '(02) 9988 7766'),
+('Bob', 'Bee', '50 Fifty Court, Brisbane', '(07) 1111 2222');
+
+CREATE TABLE PRODUCTS
+(
+PRICE varchar(8),
+PRODUCTNAME varchar(64),
+DESCRIPTION varchar(255),
+NUTRITIONAL varchar(12),
+);
+
+INSERT INTO PRODUCTS (PRICE, PRODUCTNAME, DESCRIPTION, NUTRITIONAL) 
+VALUES ('12.99', 'Barbeque Deluxe',	'Smokey Western Australian beef brisket, paired with tender Peking duck, seasoned chicken, pepperoni & sliced red onion, all on a BBQ sauce base, topped with Hickory BBQ sauce & rocket garnish', '5694kj'),
+('10.99', 'Meatlovers', 'Mega loaded, mega tasty. Featuring seasoned chicken, pork & fennel sausage, crumbled beef, pepperoni slices, Italian sausage & crispy rasher bacon, brought together with a Hickory BBQ sauce.', '5543kj'),
+('105.99', 'Philly Cheese Steak', 'Smokey Western Australian beef brisket, vintage cheddar, Hastings Valley parmesan, sliced mushroom, capsicum & red onion, complemented by a crème fraiche base.', 
+'5192kj'),
+('99.99', 'The Big Cheese', 'Huge pie cut into 8 extra-large slices. Authentic, soft & foldable New York-style dough, topped with Marinara pizza sauce & lots of stretchy mozzarella', '5091kj'),
+('3.50', 'Surf and Turf', 'Western Australian beef brisket, Hastings Valley parmesan, juicy prawns, diced tomato & red onion, topped with a drizzle of hollandaise & rocket garnish.', '5434kj'),
+('15.99', 'Marcon's Poppin Pepperoni', 'Loaded with 50% more of your favourite Marcon's pepperoni', '5123kj'),
+('17.99', 'Dragon's Breath', 'Marcon's pepperoni, smokey leg ham, seasoned ground beef, fiery jalapenos, tomato & sliced red onion with a spicy hit of chilli flakes', '4989kj'),
+('18.99', 'Chick n' Cheese', 'Succulent chicken, melted camembert, crispy rasher bacon, Italian cherry tomatoes, baby spinach & sliced red onion, topped with hollandaise sauce',
+'5834kj'),
+('44.99', 'Velvet Veggie', 'Mushrooms, diced tomato, capsicum, baby spinach & slices of red onion, topped with crumbled feta cheese, kalamata olives & oregano',
+'4873kj'),
+('22.99', 'Hawaiian', 'Mushrooms, diced tomato, capsicum, baby spinach & slices of red onion, topped with crumbled feta cheese, kalamata olives & oregano', '4873kj'),
+('14.99', 'Ferrari', 'Marcon's pepperoni paired with Italian sausage, fresh capsicum, diced tomato & Kalamata olives, finished with creamy garlic sauce & oregano', '4900kj'),
+('11.99', 'Double Pound Heart Attack', 'Generously topped with crispy rasher bacon & crumbled beef on a BBQ sauce base, finished with creamy mayonnaise', '13109kj'),
+('13.99', 'Vivacious Vegan', 'Vegan cheese, avocado, diced tomato, mushrooms, red onion, capsicum & olives, topped with spring onions', '5843kj'),
+('N/A', 'Custom Pizza', 'Make your own custom pizza, prices and nutritional information variable', 'N/A');
+
+CREATE TABLE EVENTS
+(
+EVENTID INTEGER PRIMARY KEY,
+EVENTNAME varchar(64),
+LOCATION varchar(64),
+DESCRIPTION varchar(255),
+DATE varchar(10)
+);
+
+INSERT INTO EVENTS (EVENTNAME, LOCATION, DESCRIPTION, DATE)
+VALUES ('Park Run', 'Stones Corner', 'Saturday morning fun run.', '25/06/2016'),
+('Meet & Greet BBQ', 'Brisbane CBD', 'Meet and Greet in Queen Street Mall', '26/06/2016'),
+('Clearance Sale', 'Griffith Store', 'Clearance Sale for all items', '11/07/2016');
